@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPC Faculty Profile Prototype</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        header { background-color: #003a70; color: white; padding: 20px; border-bottom: 5px solid #ffc72c; }
+        nav { background: #f4f4f4; padding: 10px; margin-bottom: 20px; }
+        .container { max-width: 1000px; margin: auto; font-family: Arial, sans-serif; }
+        footer { margin-top: 50px; border-top: 1px solid #ccc; padding: 20px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container"><h1>St. Petersburg College Instructors</h1></div>
+    </header>
+    <nav>
+        <div class="container">
+            <a href="/Index">Home</a> | <a href="/Profile">Faculty Profile</a> | <a href="/Contact">Interest Form</a>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container">&copy; 2026 St. Petersburg College | HTML Prototype</div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
