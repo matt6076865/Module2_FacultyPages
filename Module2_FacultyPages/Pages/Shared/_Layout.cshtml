@@ -3,30 +3,75 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SPC Faculty Profile Prototype</title>
+    <title>SPC Faculty Profile</title>
     <link rel="stylesheet" href="~/css/site.css" />
+
     <style>
-        header { background-color: #003a70; color: white; padding: 20px; border-bottom: 5px solid #ffc72c; }
-        nav { background: #f4f4f4; padding: 10px; margin-bottom: 20px; }
-        .container { max-width: 1000px; margin: auto; font-family: Arial, sans-serif; }
-        footer { margin-top: 50px; border-top: 1px solid #ccc; padding: 20px; font-size: 0.8em; }
+        header {
+            background-color: #003a70;
+            color: #ffffff;
+            padding: 22px 0;
+        }
+
+        nav {
+            background: #f1f1f1;
+            padding: 12px 0;
+            margin-bottom: 25px;
+        }
+
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 15px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 2px solid #eee;
+            padding: 25px 0;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        nav a {
+            color: #003a70;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
     </style>
 </head>
 <body>
     <header>
-        <div class="container"><h1>St. Petersburg College Instructors</h1></div>
+        <div class="container">
+            <h1 style="margin: 0; font-size: 1.8rem;">St. Petersburg College Instructors</h1>
+        </div>
     </header>
+
     <nav>
         <div class="container">
-            <a href="/Index">Home</a> | <a href="/Profile">Faculty Profile</a> | <a href="/Contact">Interest Form</a>
+            <a href="/Index">Home</a>
+            <span style="color: #ccc; padding: 0 10px;">|</span>
+            <a href="/Profile">Faculty Profile</a>
+            <span style="color: #ccc; padding: 0 10px;">|</span>
+            <a href="/Contact">Student Course Interest Form</a>
         </div>
     </nav>
+
     <div class="container">
         @RenderBody()
     </div>
+
     <footer>
-        <div class="container">&copy; 2026 St. Petersburg College | HTML Prototype</div>
+        <div class="container">
+             2026 St. Petersburg College
+        </div>
     </footer>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
