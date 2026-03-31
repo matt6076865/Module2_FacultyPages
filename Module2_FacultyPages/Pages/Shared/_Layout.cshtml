@@ -3,45 +3,51 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SPC Faculty Profile</title>
+    <title>SPC Faculty Pages</title>
     <link rel="stylesheet" href="~/css/site.css" />
 
     <style>
-        header {
-            background-color: #003a70;
-            color: #ffffff;
-            padding: 22px 0;
-        }
+            header {
+                background-color: #003a70;
+                color: #ffffff;
+                padding: 22px 0;
+                text-align: center;
+            }
 
-        nav {
-            background: #f1f1f1;
-            padding: 12px 0;
-            margin-bottom: 25px;
-        }
+            nav {
+                text-align: center;
+                background: gold;
+                padding: 12px 0;
+                margin-bottom: 25px;
+            }
 
-        .container {
-            max-width: 1040px;
-            margin: 0 auto;
-            padding: 0 15px;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
+            .container {
+                max-width: 1040px;
+                margin: 0 auto;
+                padding: 0 15px;
+                font-family: 'Segoe UI', Arial, sans-serif;
+            }
 
-        footer {
-            margin-top: 60px;
-            border-top: 2px solid #eee;
-            padding: 25px 0;
-            font-size: 0.85em;
-            color: #666;
-        }
+            footer {
+                 margin-top: 60px;
+                border-top: 4px solid #000000;
+                padding: 25px 0;
+                font-size: 0.85em;
+                color: #000000; 
+            }
 
-        nav a {
-            color: #003a70;
-            text-decoration: none;
-            font-weight: 500;
-        }
+            nav a {
+                color: #003a70;
+                text-decoration: none;
+                font-weight: 500;
+            }
 
-            nav a:hover {
-                text-decoration: underline;
+                nav a:hover {
+                    text-decoration: underline;
+                }
+
+            .body-content {
+                text-align: center;
             }
     </style>
 </head>
@@ -55,20 +61,20 @@
     <nav>
         <div class="container">
             <a href="/Index">Home</a>
-            <span style="color: #ccc; padding: 0 10px;">|</span>
+            <span style="color: #003a70; padding: 0 10px;">|</span>
             <a href="/Profile">Faculty Profile</a>
-            <span style="color: #ccc; padding: 0 10px;">|</span>
+            <span style="color: #003a70; padding: 0 10px;">|</span>
             <a href="/Contact">Student Course Interest Form</a>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container body-content">
         @RenderBody()
     </div>
 
-    <footer>
+    <footer style="text-align: center;">
         <div class="container">
-             2026 St. Petersburg College
+            2026 St. Petersburg College
         </div>
     </footer>
 
